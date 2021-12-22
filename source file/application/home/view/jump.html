@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>留言板</title>
+		<meta  charset="UTF-8">
+		<!-- content为停留的秒数，url为跳转的地址 -->
+		<meta http-equiv="refresh" content="<?php echo $time;?>;url=<?php echo $url;?>">
+		<link rel="stylesheet" href="./public/css/home.css">
+	</head>
+	<body>
+		<div id = "box">
+			<h1>留言板</h1>
+			<div style="font-size: 14px;margin: 40px;">
+				<!-- msg提示信息 -->
+				<?php echo $msg;?>正在跳转...
+			</div>	
+		</div>
+	</body>
+</html>

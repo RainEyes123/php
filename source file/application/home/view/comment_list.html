@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>留言列表</title>
+        <link rel="stylesheet" href="./public/css/home.css">
+    </head>
+    <body>
+        <div id="box">
+            <hl>留言板</hl>
+            <!-- 留言表单 -->
+            <div class="postbox">
+                <!-- 设置信息，post，p=home，name等 -->
+                <form method="post"action="index.php?p=home&c=comment&a=add">
+                    <ul class="userbox">
+                        <li>姓名：</li>
+                        <li class="user_name">
+                            <input name="poster"type="text">
+                        </li>
+                        <li>邮箱：</li>
+                        <li class="user_email">
+                            <input name="mail"input type="text">
+                        </li>
+                        <li class="user_post">
+                            <input class="post_button"value="发布" type="submit">
+                        </li>
+                    </ul>
+                    <textarea name="comment"required>在此输入留言</textarea>
+                </form>
+            </div>
+            <!-- 留言数与排序 -->
+            <div class="comment_info">
+                留言数：<?php echo $num;?>
+                <span class="sort">
+                    排序方式：
+                    <!-- 默认正序 -->
+                    <a href="index.php" <?php if (!isset($_GET['sort'])) echo 'class="curr"';?>>正序</a>
+                    <a href="index.php?sort=desc"<?php if (isset($_GET['sort']) && $_GET['sort'] == 'desc') 
+                        echo 'class="curr"';?>>倒序</a>
+                </span>
+            </div>
+            <!-- 循环输出留言列表 -->
+            <ul class="comments">
+                <?php foreach ($data as $v):?>
+                <li>
+                    <p>用户名: <?php echo $v['poster']?></p>
+                    <p><?php echo $v['comment']?></p>
+                    <p>发布时间: <?php echo $v['date']?></p>
+                    <!-- 管理员回复 -->
+                     <?php if ($v['reply'] !== ''):?>
+                        <ul class="comment_reply">
+                            <li>
+                                <p>管理员回复:</p>
+                                <p>嗨，你好。我是系统管理员，欢迎你的到来</p>
+                            </li>
+                        </ul>
+                    <?php endif;?>
+                </li>
+                <?php endForeach;?>
+            </ul>
+            <!-- 页脚分页信息 -->
+            <div class="comments_footer">
+                <?php echo $pageList;?>
+            </div>
+        </div>
+    </body>
+</html>

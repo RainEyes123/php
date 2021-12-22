@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>留言详细信息</title>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        table,h1 {width: 600px;margin: 0 auto;}
+        td {border: solid 1px blue;}
+    </style>
+    <body>
+        <h1>留言列表</h1>
+        <table>
+            <tr><td>ID</td><td><?php echo $data['id'];?></td></tr>
+            <tr><td>姓名</td><td><?php echo $data['poster'];?></td></tr>
+            <tr><td>留言内容</td><td><?php echo $data['comment'];?></td></tr>
+            <tr><td>日期</td><td><?php echo $data['date'];?></td></tr>
+            <tr><td>地址</td><td><?php echo $data['ip'];?></td></tr>
+            <tr><td>电子邮箱</td><td><?php echo $data['mail'];?></td></tr>
+            <tr><td>回复内容</td><td><?php echo $data['reply'];?></td></tr>
+        </table>
+    </body>
+</html>
+
+
+
+
