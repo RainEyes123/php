@@ -1,11 +1,18 @@
-# php
-####  实训目的和目标
-1．实训的目的：基于PHP和MySQL，使用MVC模式设计一个留言板网站。
-2．实训的目标：主要目标有1)熟练应用PHP基本语法；2)掌握PHP各类函数的使用；3)掌握PHP中的数据处理；4)掌握MySQL数据库的应用；5)掌握面向对象的编程思路；6)理解综合项目的开发过程；7)依据项目需求完成数据库的设计；8)依据项目需求完成功能设计
+# php 实训
+#### 说明
+老师啊！  星期一的任务一，任务二不小心删了，git push origin master -f
+![navicat_comment](解释.png)
 
+任务十忘记标签了
+
+source code为结构和任务
 #### 任务一
 
 ***\*数据库设计任务报告\****
+
+前台：![navicat_comment](任务一/前台.png)
+
+后台：![navicat_comment](任务一/后台.png)
 
 hcit_msg.sql
 
@@ -67,4 +74,18 @@ commentModel.class.php，model.class.php
 ***\*防止SQL注入\****
 commentModel.class.php，MySQLPDO.class.php
 
+#### 任务十四
+***\*设计用户登录功能\****
+platformController.class.php，adminModel.class.php，adminController.class.php，admin_login.html，admin.css
 
+#### 任务十五
+***\*设计后台留言列表\****
+commentController.class.php，commentModel.class.php，comment_list.html
+
+#### 任务十六
+***\*设计留言回复与修改\****
+commentController.class.php，commentModel.class.php，comment_reply.html
+
+#### 任务十七
+***\*设计留言删除\****
+commentController.class.php，commentModel.class.php
